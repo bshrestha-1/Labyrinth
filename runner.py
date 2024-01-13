@@ -1,5 +1,6 @@
 import pygame
 import random
+from draw_board import draw_board
 
 # Initialize Pygame
 pygame.init()
@@ -55,26 +56,8 @@ pygame.display.set_caption("Labyrinth Game")
 # Font setup
 font = pygame.font.Font(None, 36)
 
-def draw_board():
-    for row in range(10):
-        for col in range(10):
-            x = col * CELL_SIZE
-            y = row * CELL_SIZE
-            if LABYRINTH[row][col] == 1:
-                pygame.draw.rect(screen, BLACK, (x, y, CELL_SIZE, CELL_SIZE))
-            else:
-                pygame.draw.rect(screen, WHITE, (x, y, CELL_SIZE, CELL_SIZE), 1)
-    
-    # Draw exit
-    pygame.draw.rect(screen, GREEN, (EXIT[1] * CELL_SIZE, EXIT[0] * CELL_SIZE, CELL_SIZE, CELL_SIZE))
-    
-    # Draw runner
-    pygame.draw.circle(screen, BLUE, (runner_position[1] * CELL_SIZE + CELL_SIZE // 2, 
-                                      runner_position[0] * CELL_SIZE + CELL_SIZE // 2), CELL_SIZE // 3)
-    
-    # Draw chaser
-    pygame.draw.circle(screen, RED, (chaser_position[1] * CELL_SIZE + CELL_SIZE // 2, 
-                                     chaser_position[0] * CELL_SIZE + CELL_SIZE // 2), CELL_SIZE // 3)
+
+
 
 def draw_cards(cards, y_offset):
     card_rects = []
@@ -138,7 +121,8 @@ def main():
     running = True
     while running:
         screen.fill(WHITE)
-        draw_board()
+        # Draw the initial game board
+        draw_board(LABYRINTH, CELL_SIZE, screen, BLACK, WHITE, GREEN, BLUE,RED, runner_position, chaser_position, EXIT)
         
         runner_text = font.render("Runner Cards:", True, BLACK)
         chaser_text = font.render("Chaser Cards:", True, BLACK)
