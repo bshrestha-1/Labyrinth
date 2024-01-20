@@ -1,7 +1,7 @@
 import pygame
 
 
-
+# to draw the board
 def draw_board(LABYRINTH, CELL_SIZE, screen, BLACK, WHITE, GREEN, BLUE,RED, runner_position, chaser_position, EXIT):
     for row in range(10):
         for col in range(10):
