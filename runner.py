@@ -1,6 +1,7 @@
 import pygame
 import random
 from draw_board import draw_board
+from other_mechanics import switch_places,rotate_tile
 
 # Initialize Pygame
 pygame.init()
@@ -107,11 +108,7 @@ def use_key_card(position, direction):
         return [x, y+2]
     return position
 
-def rotate_tile(row, col):
-    LABYRINTH[row][col] = 1 - LABYRINTH[row][col]  # Toggle between 0 and 1
 
-def switch_places(runner_pos, chaser_pos):
-    return chaser_pos, runner_pos
 
 def main():
     global runner_position, chaser_position, runner_cards, chaser_cards
@@ -178,7 +175,7 @@ def main():
                             elif selected_card.startswith("Rotate Card"):
                                 row = random.randint(0, 9)
                                 col = random.randint(0, 9)
-                                rotate_tile(row, col)
+                                rotate_tile(LABYRINTH,row, col)
                                 if current_player == "Runner":
                                     runner_cards.remove(selected_card)
                                     runner_cards.append(random.choice(ALL_CARDS))
