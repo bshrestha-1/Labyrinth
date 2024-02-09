@@ -58,17 +58,15 @@ pygame.display.set_caption("Labyrinth Game")
 font = pygame.font.Font(None, 36)
 
 
-
-
 def draw_cards(cards, y_offset):
-    card_rects = []
-    for i, card in enumerate(cards):
-        rect = pygame.Rect(550, y_offset + i * 40, 400, 30)
-        pygame.draw.rect(screen, GRAY, rect)
-        text = font.render(card, True, BLACK)
-        screen.blit(text, (560, y_offset + i * 40))
-        card_rects.append(rect)
-    return card_rects
+        card_rects = []
+        for i, card in enumerate(cards):
+            rect = pygame.Rect(550, y_offset + i * 40, 400, 30)
+            pygame.draw.rect(screen, GRAY, rect)
+            text = font.render(card, True, BLACK)
+            screen.blit(text, (560, y_offset + i * 40))
+            card_rects.append(rect)
+        return card_rects
 
 def draw_direction_buttons():
     buttons = {}
@@ -80,6 +78,8 @@ def draw_direction_buttons():
         screen.blit(text, (560 + i * 100, 455))
         buttons[direction] = rect
     return buttons
+
+
 
 def move_player(position, direction, steps):
     x, y = position
