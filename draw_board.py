@@ -1,6 +1,7 @@
 import pygame
 
 
+
 # to draw the board
 def draw_board(LABYRINTH, CELL_SIZE, screen, BLACK, WHITE, GREEN, BLUE,RED, runner_position, chaser_position, EXIT):
     for row in range(10):
@@ -22,3 +23,4 @@ def draw_board(LABYRINTH, CELL_SIZE, screen, BLACK, WHITE, GREEN, BLUE,RED, runn
     # Draw chaser
     pygame.draw.circle(screen, RED, (chaser_position[1] * CELL_SIZE + CELL_SIZE // 2,
                                      chaser_position[0] * CELL_SIZE + CELL_SIZE // 2), CELL_SIZE // 3)
+    
