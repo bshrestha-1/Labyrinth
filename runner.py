@@ -3,7 +3,7 @@ import random
 from draw_board import draw_board
 from other_mechanics import switch_places,rotate_tile
 
-# Initialize Pygame2
+# Initialize Pygame1
 pygame.init()
 
 # Game constants
