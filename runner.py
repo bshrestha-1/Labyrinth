@@ -1,9 +1,9 @@
 import pygame
 import random
 from draw_board import draw_board
-from other_mechanics import switch_places,rotate_tile
+from other_mechanics import switch_places,rotate_tile, move_player
 
-# Initialize Pygame2
+# Initialize Pygame
 pygame.init()
 
 # Game constants
@@ -81,20 +81,7 @@ def draw_direction_buttons():
 
 
 
-def move_player(position, direction, steps):
-    x, y = position
-    for _ in range(steps):
-        if direction == "up" and x > 0 and LABYRINTH[x-1][y] == 0:
-            x -= 1
-        elif direction == "down" and x < 9 and LABYRINTH[x+1][y] == 0:
-            x += 1
-        elif direction == "left" and y > 0 and LABYRINTH[x][y-1] == 0:
-            y -= 1
-        elif direction == "right" and y < 9 and LABYRINTH[x][y+1] == 0:
-            y += 1
-        else:
-            break  # Stop if we hit a wall or the edge of the board
-    return [x, y]
+
 
 def use_key_card(position, direction):
     x, y = position
@@ -156,11 +143,11 @@ def main():
                             if selected_card.startswith("Move"):
                                 steps = int(selected_card.split()[1])
                                 if current_player == "Runner":
-                                    runner_position = move_player(runner_position, direction, steps)
+                                    runner_position = move_player(LABYRINTH,runner_position, direction, steps)
                                     runner_cards.remove(selected_card)
                                     runner_cards.append(random.choice(ALL_CARDS))
                                 else:
-                                    chaser_position = move_player(chaser_position, direction, steps)
+                                    chaser_position = move_player(LABYRINTH,chaser_position, direction, steps)
                                     chaser_cards.remove(selected_card)
                                     chaser_cards.append(random.choice(ALL_CARDS))
                             elif selected_card.startswith("Key Card"):
