@@ -60,7 +60,7 @@ To run the Labyrinth Game, you must install Python and Pygame using pip. Follow 
 - The game ends when the Runner escapes or the Chaser catches the Runner.
 
 ## Contributing
-Contributions are welcome! If you have suggestions for improvements or features, open an issue or submit a pull request.
+- Contributions are welcome! If you have suggestions for improvements or features, open an issue or submit a pull request.
     - Fork the repository.
     - Create a new branch (git checkout -b feature/YourFeature).
     - Make and commit your changes (git commit -m 'Add some feature').
