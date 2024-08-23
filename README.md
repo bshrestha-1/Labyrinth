@@ -1,6 +1,6 @@
 # Labyrinth Game
 
-Welcome to Labyrinth Game! I’ve been developing this board game concept during my weekends. I am creating a digital prototype to test the gameplay mechanics. I plan to bring it to life as a physical board game if it proves successful.
+Welcome to Labyrinth Game! I’ve been developing this board game concept during my weekends. I am creating a digital prototype to test the gameplay mechanics. I plan to bring it to life as a physical board game if it proves successful. The digital game is still in the works and is not complete yet. 
 
 This interactive board game is implemented in Python using the Pygame library. Players take on the roles of Runners and Chasers, navigating a labyrinth filled with challenges and strategic card plays.
 
