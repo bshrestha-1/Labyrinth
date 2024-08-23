@@ -13,6 +13,17 @@ def move_player(LABYRINTH, position, direction, steps):
             break  # Stop if we hit a wall or the edge of the board
     return [x, y]
 
+def use_key_card(position, direction):
+    x, y = position
+    if direction == "up" and x > 1:
+        return [x-2, y]
+    elif direction == "down" and x < 8:
+        return [x+2, y]
+    elif direction == "left" and y > 1:
+        return [x, y-2]
+    elif direction == "right" and y < 8:
+        return [x, y+2]
+    return position
 
 
 
