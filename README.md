@@ -12,7 +12,7 @@ This interactive board game is implemented in Python using the Pygame library. P
 - [How to Play](#how-to-play)
 - [Game Rules](#game-rules)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Game Overview
 
@@ -39,27 +39,27 @@ To run the Labyrinth Game, you must install Python and Pygame using pip. Follow 
    git clone https://github.com/yourusername/labyrinth-game.git
    cd labyrinth-game
 
-How to Play
-    Start the Game: Run the main_game.py file.
-    Select Your Card: Each player takes turns selecting a card from their hand.
-    Choose a Direction: After selecting a card, choose a direction to move (up, down, left, right).
-    Use Card Effects: Perform the corresponding action depending on the card type.
-    Win Conditions:
-        The Runner wins by reaching the exit.
-        The Chaser wins by catching the Runner.
+## How to Play
+- Start the Game: Run the main_game.py file.
+- Select Your Card: Each player selects a card from their hand.
+- Choose a Direction: After selecting a card, choose a direction to move (up, down, left, right).
+- Use Card Effects: Perform the corresponding action depending on the card type.
+- Win Conditions:
+  - The Runner wins by reaching the exit.
+  - The Chaser wins by catching the Runner.
 
-Game Rules
-    The game board is a 10x10 grid, where:
-        The blue circle represents the Runner.
-        The red circle represents the Chaser.
-        The green box represents the exit.
-        The white tiles represent walls.
-        The hollow walkway represents open spaces.
-    Players can use cards to move, manipulate the board, or draw new cards.
-    Players can only move through walls if they use a Key Card.
-    The game ends when the Runner escapes or the Chaser catches the Runner.
+## Game Rules
+- The game board is a 10x10 grid, where:
+     - The blue circle represents the Runner.
+     - The red circle represents the Chaser.
+     - The green box represents the exit.
+     - The white tiles represent walls.
+     - The hollow walkway represents open spaces.
+- Players can use cards to move, manipulate the board, or draw new cards.
+- Players can only move through walls if they use a Key Card.
+- The game ends when the Runner escapes or the Chaser catches the Runner.
 
-Contributing
+## Contributing
 Contributions are welcome! If you have suggestions for improvements or features, open an issue or submit a pull request.
     - Fork the repository.
     - Create a new branch (git checkout -b feature/YourFeature).
