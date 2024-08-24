@@ -67,3 +67,6 @@ To run the Labyrinth Game, you must install Python and Pygame using pip. Follow 
     - Push to the branch (git push origin feature/YourFeature).
     - Open a pull request.
 
+## Layout of the game so far:
+
+[![](Screenshot.png)]
