@@ -69,4 +69,4 @@ To run the Labyrinth Game, you must install Python and Pygame using pip. Follow 
 
 ## Layout of the game so far:
 
-[(Screenshot.png)]
+[](Screenshot.png)
