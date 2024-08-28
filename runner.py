@@ -3,7 +3,6 @@ import random
 from draw_board import draw_board
 from other_mechanics import switch_places,rotate_tile, move_player, use_key_card
 
-# Initialize Pygame
 pygame.init()
 
 # Game constants
@@ -46,7 +45,7 @@ SWITCH_PLACES_CARDS = ["Switch Places Card"]
 
 ALL_CARDS = MOVEMENT_CARDS + KEY_CARDS + ROTATE_CARDS + DRAW_CARDS + SWITCH_PLACES_CARDS
 
-# Initialize player cards
+# player cards
 runner_cards = random.sample(ALL_CARDS, 3)
 chaser_cards = random.sample(ALL_CARDS, 3)
 
